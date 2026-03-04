@@ -1,3 +1,5 @@
+console.log("DATABASE_URL present?", !!process.env.DATABASE_URL);
+
 const { Pool } = require("pg");
 
 let pool;
