@@ -1,13 +1,18 @@
-const { Router } = require('express');
-const controller = require('./controller');
+const { Router } = require("express");
+const controller = require("./controller");
 
-const router = Router ();
+const router = Router();
 
-router.get('/', controller.getLibrary);
-router.get('/:id', controller.getLibraryById);
-router.post('/', controller.addBook);
-router.put('/', controller.updateLibrary);
+// GET all
+router.get("/", controller.getLibrary);
+
+// GET one by id
+router.get("/:id", controller.getLibraryById);
+
+// POST create
+router.post("/", controller.addBook);
+
+// ✅ PUT update
+router.put("/:id", controller.updateLibrary);
 
 module.exports = router;
-
-//test
